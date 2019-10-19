@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- persistent style sheets -->
+<!--    <link type="text/css" rel="stylesheet" href="fancy.css">-->
+    <!--  preferred style sheets  -->
+    <link type="text/css" rel="stylesheet" title="Basic styles" href="basic.css" />
+<!--    <link type="text/css" rel="stylesheet" title="Basic styles" href="danger.css" />-->
+    <!-- alternate style sheets   -->
+    <link type="text/css" rel="alternate stylesheet" title="Fish and boats" href="default.css" />
+<!--    <link type="text/css" rel="alternate stylesheet" title="aaa and boats" href="danger.css" />-->
+</head>
+<body>
+
+<button>style 01</button>
+<button>style 02</button>
+<!--<button>style 03</button>-->
+<!--<button>style 04</button>-->
+<script>
+    const links = document.querySelectorAll("link[rel]");
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach((button, index) => {
+        button.addEventListener("click", (e) => {
+            links[index].disabled = true;
+            // links.forEach(link => {
+            //     link.disabled = true;
+            // });
+            // links[index].disabled = false;
+        })
+    })
+</script>
+</body>
+</html>
