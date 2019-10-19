@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // 用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值
+    function foo(arr) {
+        if (arr.length === 5) {
+            return arr;
+        }
+        let num = Math.round(Math.random() * 32 + 2);
+        arr.push(num);
+        arr = [...new Set(arr)];
+        return foo(arr);
+    }
+
+    let arr = foo([]);
+    console.log(arr);
+</script>
+</body>
+</html>
