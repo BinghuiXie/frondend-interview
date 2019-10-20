@@ -128,5 +128,5 @@ temp = temp.replace(centerHasSpace, "$1$3")
 根据 match 方法，会得到一个匹配满足的数组，使用 while 循环，上面的逻辑会一直进行，
 直到 match 匹配不到结果的时候结束循环，这是就已经去掉所有中间的空格了。
 如果文字不好理解的话，我弄了一个 gif 图，希望能帮助理解：
-
+![](http://binghuixie.cn/frondend-interview/Day%2002/manual-trim.gif)
         
