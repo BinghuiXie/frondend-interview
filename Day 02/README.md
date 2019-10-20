@@ -127,7 +127,7 @@ temp = temp.replace(centerHasSpace, "$1$3")
 这样就去掉了 b 和 l， u 和 e 之间的空格，同理，第二次循环，去掉的就是 bl 和 ue 之间的空格。   
 根据 match 方法，会得到一个匹配满足的数组，使用 while 循环，上面的逻辑会一直进行，
 直到 match 匹配不到结果的时候结束循环，这是就已经去掉所有中间的空格了。
-如果文字不好理解的话，我弄了一个 gif 图，希望能帮助理解：
+如果文字不好理解的话，我弄了一个 gif 图，希望能帮助理解(加载有些慢，耐心等待一下就行)：
 
-<img src="./manual-trim.gif" alt="去掉中间空格" width="400" />
+<img src="./manual-trim.gif" alt="去掉中间空格" width="700" />
         
