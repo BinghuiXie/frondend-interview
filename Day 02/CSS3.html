@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3</title>
+    <style>
+        body{
+            margin-bottom: 300px;
+        }
+        div {
+            width: 300px;
+            height: 300px;
+            border: 10px solid transparent;
+            padding: 15px;
+        }
+        .border-image{
+            border-image-source: url('https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+            border-image-repeat: round;
+            border-image-slice: 30;
+            border-image-width: 10px;
+        }
+        .border-image-combine{
+            border-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") round 30;
+        }
+        .muti-background{
+            background-image:
+                url("https://image.shutterstock.com/image-photo/colorful-flower-on-dark-tropical-260nw-721703848.jpg"),
+                url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg");
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<div class="border-image"></div>
+<div class="border-image-combine"></div>
+<div class="muti-background"></div>
+</body>
+</html>

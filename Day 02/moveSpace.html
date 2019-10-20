@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function manualTrim(param) {
+        let sucMsg = {}, errMsg = {}, temp = param;
+        let str = param;
+        const centerHasSpace = new RegExp("(\\w+)(\\s+)(\\w+)", "g");
+        if (typeof str !== "string") {
+            errMsg.isSuccess = false;
+            errMsg.msg = 'need string';
+            return errMsg;
+        }
+        sucMsg.removeLeft = str.replace(/^\s+/g, "");
+        sucMsg.removeRight = str.replace(/\s+$/g, "");
+        sucMsg.removeBothLeftandRight = str.trim();
+        sucMsg.removeAll = str.replace(/\s/g, "");
+        while (temp.match(centerHasSpace)) {
+            temp = temp.replace(centerHasSpace, "$1$3")
+        }
+        sucMsg.removeCenter = temp;
+        sucMsg.msg = "remove space success";
+        return sucMsg;
+    }
+
+    console.log(manualTrim("       b   l     u     e      "));
+</script>
+</body>
+</html>
