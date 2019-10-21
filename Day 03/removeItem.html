@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function removeItem(str, target) {
+        if (typeof str !== 'string') {
+            throw Error("first parameter has to be a string");
+            return ;
+        }
+        let temp = reverse(str);
+        temp = temp.split("");
+        for (let i = 0; i < temp.length; i++) {
+            if (temp[i] === target) {
+                temp.splice(i, 1);
+                break;
+            }
+        }
+        temp = temp.join("");
+        console.log(temp);
+        return reverse(temp);
+    }
+
+    function reverse (str) {
+        return str.split("").reverse().join('');
+    }
+
+    console.log(removeItem("blur click compare", "c"));
+</script>
+</body>
+</html>
