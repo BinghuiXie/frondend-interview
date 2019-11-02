@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<button onclick="setCookie()">设置cookie</button>
+<button onclick="deleteCookie()">删除cookie</button>
+<script>
+    function setCookie() {
+        const date = Date.now() + 24 * 7 * 3600000;
+        const expires = new Date(date).toUTCString();
+        console.log(expires);
+        document.cookie = `AuthKey=weu5u34pongfer9tuewoiehjfi;expires=${ expires }`
+    }
+    function deleteCookie() {
+        const date = new Date().getTime() - 24 * 7 * 3600000;
+        const expires = new Date(date).toUTCString();
+        console.log(expires);
+        document.cookie = `AuthKey=weu5u34pongfer9tuewoiehjfi;expires=${ expires }`
+    }
+</script>
 </body>
 </html>

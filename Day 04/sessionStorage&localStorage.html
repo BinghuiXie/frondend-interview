@@ -5,10 +5,25 @@
     <title>Title</title>
 </head>
 <button onclick="setSessionStorage()">设置sessionStorage</button>
+<button onclick="setLocalStorage()">设置localStorage</button>
+
+<button onclick="getSessionStorage('test')">获取sessionStorage</button>
+<button onclick="getLocalStorage('local')">获取localStorage</button>
 <body>
 <script>
+    // 设置 sessionStorage 和 localStorage
     function setSessionStorage () {
         sessionStorage.setItem("test", "test");
+    }
+    function setLocalStorage() {
+        localStorage.setItem("local", "test");
+    }
+
+    function getSessionStorage(key) {
+        document.body.append(`sessionStorage: ${sessionStorage.getItem(key)}`)
+    }
+    function getLocalStorage(key) {
+        document.body.append(`localStorage: ${localStorage[key]}`)
     }
 </script>
 </body>
