@@ -6,11 +6,12 @@ Day 04
 ## 第4天 HTML5的文件离线储存怎么使用，工作原理是什么？
 
 首先，离线存储允许我们把数据存在浏览器中一段时间(在断网的时候)，这样，万一断网了，还可以从缓存中拿过来数据
-
+    
 - html5 离线缓存技术
     1. sessionStorage
     2. localStorage
-    3. manifest
+    3. indexDB
+    4. manifest
     
 ### sessionStorage
 
@@ -110,8 +111,12 @@ function deleteCookie() {
 }
 ```
 
+### indexDB
+
+
 
 相关链接：   
-[HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
-[Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+[HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)    
+[Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)    
+
 
